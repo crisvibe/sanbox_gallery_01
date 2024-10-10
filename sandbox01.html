@@ -31,6 +31,39 @@
             }
             window.onload = loadMenu();
         </script>
+
+        <style>
+            .dice {
+                font-size: 4em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                width: 100px;
+                height: 100px;
+                border-radius: 24px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: rgb(139, 139, 139);
+                background-color: rgb(187, 187, 187);
+            }
+            .dice-button {
+                font-size: 1.5em;
+                width: 100px;
+                height: 70px;
+                margin: 20px;
+                padding: 10px;
+                border-radius: 14px;
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 5px;
+                /* border-color: rgb(139, 139, 139);
+                background-color: rgb(187, 187, 187); */
+            }
+            .dice-button:active {
+                background-color: red;
+            }
+        </style>
     </head>
     
     <body>
@@ -57,12 +90,35 @@
                 <hr>
             
                 <p>Counter</p>
-                <h4 id="count">0</h4>
+                <h4 id="counter">0</h4>
+                <button id="decrease" class="btn btn-primary">Decrease</button>
+                <button id="reset" class="btn btn-primary">Reset</button>
+                <button id="increase" class="btn btn-primary">Increase</button>
             
             </section>
             <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
+                <div class="row">
+                    <hr>
+                    <h2 style="display: flex; justify-content: center;">🐍 Snake Eyes - Dice Game 💀</h2>
+                    <hr>
+                    <div class="col">
+                        <h5>You:</h5>
+                        <h2 id="userScore" style="color: rgb(211, 22, 22);">Score</h2>
+                        <div id="dice1" class="dice">1</div>
+                        <div id="diceContainer"></div>
+                    </div>
+                    <div class="col">
+                        <h1>VS.</h1>
+                        <h2 id="resultMessage" style="color: rgb(2, 120, 138);"></h2>
+                    </div>
+                    <div class="col">
+                        <h5>Enemy:</h5>
+                        <h2 id="enemyScore" style="color: rgb(211, 22, 22);">Score</h2>
+                        <div id="dice2" class="dice">1</div>
+                    </div>
+                    <div>
+                        <button id="rollDice" class="dice-button">Roll</button>
+                    </div>
                 </div>
             </div>
         </main>
