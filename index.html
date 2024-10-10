@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My JavaScript Sandbox</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <!-- My Stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <!-- Load Navbar -->
+        <script>
+            function loadMenu() {
+                fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu').innerHTML = data;
+                });
+            }
+            window.onload = loadMenu();
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <div id="menu"></div>
+        </header>
+        <main>
+            <section class="py-5 text-center container">
+                <h1>JavaScript Learning Sandbox</h1>
+            </section>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5>
+                                <a href="sandbox01.html">Sandbox01</a>
+                            </h5>
+                          <p class="card-text">JavaScript Basic Tests</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                          <div class="card-body">
+                              <h5>
+                                  <a href="simple_calculator_01.html">Simple Calculator 01</a>
+                              </h5>
+                            <p class="card-text">This is the first itteration. Very likely I will make more calculator apps as I progress.</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                          <div class="card-body">
+                            <h5><a href="simple_calculator_02.html">Simple Calculator 02</a></h5>
+                            <p class="card-text">Second itteration of a calculator</p>
+                          </div>
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="card shadow-sm">
+                          <div class="card-body">
+                            <h5><a href="#">Another Project</a></h5>
+                            <p class="card-text">Text</p>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+            </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        
+        <script src="#"></script>
+    </body>
+</html>
+
+

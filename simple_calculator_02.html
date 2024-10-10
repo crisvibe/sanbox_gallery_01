@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My JavaScript Sandbox</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <!-- My Stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <!-- Load Navbar -->
+        <script>
+            function loadMenu() {
+                fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu').innerHTML = data;
+                });
+            }
+            window.onload = loadMenu();
+        </script>
+        <style>
+            
+#calculator {
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(43, 43, 43);
+    border-radius: 15px;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+    #display {
+        width: 100%;
+        padding-left: 25px;
+        font-size: 3rem;
+        text-align: left;
+        border: none;
+        background-color: rgb(69, 69, 69);
+        color: rgb(222, 222, 222);
+    }
+
+    #keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    button {
+        width: 75px;
+        height: 75px;
+        border-radius: 50px;
+        border: none;
+        background-color: rgb(95, 95, 95);
+        color: rgb(222, 222, 222);
+        font-size: rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+        button:hover {
+            background-color: hsl(0, 0%, 45%);
+        }
+        button:active {
+            background-color: hsl(0, 0%, 55%);
+        }
+
+    .operator-btn {
+        background-color: rgb(183, 124, 14);
+    }
+    .operator-btn:hover {
+        background-color: rgb(208, 141, 16);
+    }
+    .operator-btn:active {
+        background-color: rgb(233, 159, 23);
+    }
+
+    .bgButton {
+        margin: 10px;
+        margin-left: 30px;
+        padding: 10px;
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(95, 95, 95);
+        color: rgb(222, 222, 222);
+        font-size: rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <div id="menu"></div>
+        </header>
+        <main>
+            <section class="py-5 container">
+                <h1>🧮 Simple Calculator 02</h1>
+            </section>
+            <div id="calculator">
+                <input id="display" readonly>
+                <div id="keys">
+                    <button class="calcButton" onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                    <button onclick="appendToDisplay('.')">.</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="deleteCharacter()">D</button>
+                </div>
+            </div>
+            <div>
+                <button
+                    class="bgButton"
+                    onclick="changeBackground()">
+                    Change Background Color
+                </button>
+            </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="scripts/simple_calculator_02.js"></script>
+    </body>
+</html>
+
+
