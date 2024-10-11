@@ -63,6 +63,35 @@
             .dice-button:active {
                 background-color: red;
             }
+            
+            .dice2 {
+                margin: 20px;
+                width: 100px;
+                height: 100px;
+                border-radius: 24px;
+                border-width: 2px;
+                border-style: solid;
+
+            }
+            #diceContainer1, #diceContainer2 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 10px;
+                max-width: 100%;
+                overflow: hidden;
+            }
+                .diceFace {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    aspect-ratio: 1 / 1;
+                    text-align: center;
+                    font-size: 2em;
+                    line-height: 0;
+                }
+                .diceFace-0 {
+                    visibility: hidden;
+                }
         </style>
     </head>
     
@@ -104,8 +133,10 @@
                     <div class="col">
                         <h5>You:</h5>
                         <h2 id="userScore" style="color: rgb(211, 22, 22);">Score</h2>
-                        <div id="dice1" class="dice">1</div>
-                        <div id="diceContainer"></div>
+                        <!-- <div id="dice1" class="dice">1</div> -->
+                        <div class="dice2">
+                            <div id="diceContainer1"></div>
+                        </div>
                     </div>
                     <div class="col">
                         <h1>VS.</h1>
@@ -114,11 +145,14 @@
                     <div class="col">
                         <h5>Enemy:</h5>
                         <h2 id="enemyScore" style="color: rgb(211, 22, 22);">Score</h2>
-                        <div id="dice2" class="dice">1</div>
+                        <div class="dice2">
+                            <div id="diceContainer2"></div>
+                        </div>
                     </div>
                     <div>
                         <button id="rollDice" class="dice-button">Roll</button>
                     </div>
+                    <div><button onclick="deleteChildDiv()">Remove</button></div>
                 </div>
             </div>
         </main>
