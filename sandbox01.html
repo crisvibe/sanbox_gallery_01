@@ -31,68 +31,6 @@
             }
             window.onload = loadMenu();
         </script>
-
-        <style>
-            .dice {
-                font-size: 4em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 20px;
-                width: 100px;
-                height: 100px;
-                border-radius: 24px;
-                border-width: 2px;
-                border-style: solid;
-                border-color: rgb(139, 139, 139);
-                background-color: rgb(187, 187, 187);
-            }
-            .dice-button {
-                font-size: 1.5em;
-                width: 100px;
-                height: 70px;
-                margin: 20px;
-                padding: 10px;
-                border-radius: 14px;
-                border-width: 2px;
-                border-style: solid;
-                border-radius: 5px;
-                /* border-color: rgb(139, 139, 139);
-                background-color: rgb(187, 187, 187); */
-            }
-            .dice-button:active {
-                background-color: red;
-            }
-            
-            .dice2 {
-                margin: 20px;
-                width: 100px;
-                height: 100px;
-                border-radius: 24px;
-                border-width: 2px;
-                border-style: solid;
-
-            }
-            #diceContainer1, #diceContainer2 {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                padding: 10px;
-                max-width: 100%;
-                overflow: hidden;
-            }
-                .diceFace {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    aspect-ratio: 1 / 1;
-                    text-align: center;
-                    font-size: 2em;
-                    line-height: 0;
-                }
-                .diceFace-0 {
-                    visibility: hidden;
-                }
-        </style>
     </head>
     
     <body>
@@ -113,48 +51,30 @@
             
                 <hr>
             
-                <p>Let's look at functions! 😁</p>
+                <p>Let's look at functions!</p>
                 <p id="squareResult"></p>
-            
                 <hr>
+
             
                 <p>Counter</p>
                 <h4 id="counter">0</h4>
                 <button id="decrease" class="btn btn-primary">Decrease</button>
                 <button id="reset" class="btn btn-primary">Reset</button>
                 <button id="increase" class="btn btn-primary">Increase</button>
-            
-            </section>
-            <div class="container">
-                <div class="row">
-                    <hr>
-                    <h2 style="display: flex; justify-content: center;">🐍 Snake Eyes - Dice Game 💀</h2>
-                    <hr>
-                    <div class="col">
-                        <h5>You:</h5>
-                        <h2 id="userScore" style="color: rgb(211, 22, 22);">Score</h2>
-                        <!-- <div id="dice1" class="dice">1</div> -->
-                        <div class="dice2">
-                            <div id="diceContainer1"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h1>VS.</h1>
-                        <h2 id="resultMessage" style="color: rgb(2, 120, 138);"></h2>
-                    </div>
-                    <div class="col">
-                        <h5>Enemy:</h5>
-                        <h2 id="enemyScore" style="color: rgb(211, 22, 22);">Score</h2>
-                        <div class="dice2">
-                            <div id="diceContainer2"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <button id="rollDice" class="dice-button">Roll</button>
-                    </div>
-                    <div><button onclick="deleteChildDiv()">Remove</button></div>
+                <hr>
+
+                <div>
+                    <p>Ternary Operator</p>
+                    <p id="ternaryOperator"></p>
+                    <code>
+                        let age = 20; <br>
+                        let ageResult = age >= 20 ? "You are an adult" : "You're a child"; <br>
+                    </code>
                 </div>
-            </div>
+
+            </section>
+                        
+
         </main>
         <footer>
             <!-- place footer here -->
